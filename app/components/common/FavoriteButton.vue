@@ -1,6 +1,9 @@
 <template>
     <button :class="['favoriteButton', { absolute: isHome }]" aria-label="Aggiungi ai preferiti" @click="handleClick">
-        <Icon :name="favorites.favoritesIds.includes(id) ? 'emojione:red-heart' : 'streamline-color:heart-flat'" />
+        <Icon v-if="id"
+            :name="favorites.favoritesIds.includes(id) ? 'emojione:red-heart' : 'streamline-color:heart-flat'" />
+        <Icon v-else name="streamline-color:heart-flat" />
+
     </button>
 </template>
 
@@ -17,7 +20,7 @@ const favorites = useFavoritesStore()
 
 defineProps<{
     handleClick: () => void
-    id: number
+    id?: number
 }>()
 
 const route = useRoute()

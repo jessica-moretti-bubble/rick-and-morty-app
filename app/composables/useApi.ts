@@ -24,6 +24,18 @@ export const useApi = () => {
     );
   };
 
+  const getMultipleCharacters = (ids: number[]) => {
+    if (!ids.length)
+      return { data: ref([]), pending: ref(false), error: ref(null) };
+    return useFetch<Character[]>(
+      `https://rickandmortyapi.com/api/character/${ids.join(",")}`,
+      {
+        key: `characters-${ids.join(",")}`,
+        transform: (data) => (Array.isArray(data) ? data : [data]),
+      }
+    );
+  };
+
   const getCharacterById = async (id: number) => {
     return await useFetch<Character>(
       `${config.public.apiBaseUrl}/character/${id}`
@@ -47,6 +59,7 @@ export const useApi = () => {
   return {
     getCharacters,
     getCharacterById,
+    getMultipleCharacters,
     getEpisodes,
     getLocations,
   };

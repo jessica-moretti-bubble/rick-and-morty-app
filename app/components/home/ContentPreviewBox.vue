@@ -1,7 +1,7 @@
 <template>
 
     <div class="container">
-        <FavoriteButton :handle-click="() => { }" />
+        <FavoriteButton :handle-click="() => router.push('/favorites')" />
 
         <ItemWrapper title="Personaggi" path="/characters">
             <Grid>
@@ -40,6 +40,8 @@ import { useApi } from '../../composables/useApi'
 import { computed } from 'vue'
 
 const { getCharacters, getLocations, getEpisodes } = useApi()
+
+const router = useRouter()
 
 const [{ data: characters }, { data: locations }, { data: episodes }] = await Promise.all([
     getCharacters(),
