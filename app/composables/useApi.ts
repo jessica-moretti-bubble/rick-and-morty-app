@@ -28,7 +28,7 @@ export const useApi = () => {
     if (!ids.length)
       return { data: ref([]), pending: ref(false), error: ref(null) };
     return useFetch<Character[]>(
-      `https://rickandmortyapi.com/api/character/${ids.join(",")}`,
+      `${config.public.apiBaseUrl}/character/${ids.join(",")}`,
       {
         key: `characters-${ids.join(",")}`,
         transform: (data) => (Array.isArray(data) ? data : [data]),

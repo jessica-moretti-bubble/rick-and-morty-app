@@ -1,11 +1,12 @@
 <template>
     <div class="menu">
-        <RouterLink to="/favorites" class="link" v-if="showFavoritesButton">
-            <p> Visualizza i preferiti</p>
-        </RouterLink>
         <RouterLink to="/" class="link">
             <p> Indietro</p>
         </RouterLink>
+        <RouterLink to="/favorites" class="link" v-if="showFavoritesButton">
+            <p> Visualizza i preferiti</p>
+        </RouterLink>
+
     </div>
 </template>
 
@@ -43,5 +44,16 @@ defineProps<{
     box-shadow: 0 0 20px rgba(124, 255, 78, 0.6);
     transform: translateY(-2px) scale(1.03);
     color: #C3FFB5;
+}
+
+@media (max-width: 640px) {
+    .link {
+        font-size: 0.8rem;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
 }
 </style>

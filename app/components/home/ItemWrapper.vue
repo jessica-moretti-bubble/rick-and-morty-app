@@ -1,16 +1,13 @@
 <template>
-    <div class="wrapper">
-        <div class="headerRow">
-            <h3 class="title">{{ title }}</h3>
-            <NuxtLink :to='path'>
+    <div :class="$style.wrapper">
+        <div :class="$style.headerRow">
+            <h3 :class="$style.title">{{ title }}</h3>
+            <NuxtLink :to="path">
                 <Icon name="grommet-icons:next" />
             </NuxtLink>
-
         </div>
 
-
-
-        <div class="content">
+        <div :class="$style.content">
             <slot />
         </div>
     </div>
@@ -23,27 +20,4 @@ defineProps<{
 }>()
 </script>
 
-<style scoped>
-.wrapper {
-    width: 100%;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: start;
-}
-
-.headerRow {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.2rem;
-}
-
-.title {
-    margin-right: 10px;
-}
-
-.content {
-    width: 100%;
-}
-</style>
+<style module src="../../assets/css/ItemWrapper.module.css"></style>

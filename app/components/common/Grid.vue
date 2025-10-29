@@ -17,10 +17,4 @@
 .two-col-grid>* {
     min-width: 0;
 }
-
-@media (max-width: 640px) {
-    .two-col-grid {
-        grid-template-columns: 1fr;
-    }
-}
 </style>

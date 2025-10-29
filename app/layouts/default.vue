@@ -1,9 +1,10 @@
 <template>
     <div :class="$style.root">
+        <CursorGlow />
         <img ref="background" :class="$style.background" src="../assets/background/parallax-bg.png" />
         <div v-if="isHome" ref="first" :class="[$style.section, $style.section1]">
             <div>
-                <h1>Rick and Morty's Universe</h1>
+                <h1 :class="$style.title">Rick and Morty's Universe</h1>
             </div>
         </div>
         <div ref="second" :class="[$style.section, $style.section2]">
@@ -17,6 +18,7 @@
 import { onMounted, onUnmounted, ref } from 'vue'
 
 import $style from '../assets/css/Parallax.module.css'
+import CursorGlow from '~/components/CursorGlow.vue'
 
 const background = ref(null)
 

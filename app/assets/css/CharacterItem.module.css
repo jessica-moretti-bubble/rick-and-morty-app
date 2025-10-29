@@ -58,3 +58,13 @@
     font-size: 0.9rem;
   }
   
+  .characterItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.favoriteContainer {
+    margin-top: 0.5rem;
+    scale: 2;
+}

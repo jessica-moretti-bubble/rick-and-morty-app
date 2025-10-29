@@ -1,5 +1,5 @@
 <template>
-    <div ref="cursor" class="fixed pointer-events-none z-[9999]" :style="cursorStyle"></div>
+    <div ref="cursor" class="fixed pointer-events-none z-[9999]" :style="cursorStyle" />
 </template>
 
 <script setup>
@@ -8,7 +8,6 @@ import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 const x = ref(0)
 const y = ref(0)
 
-// Posizione fluida del cursore
 let targetX = 0, targetY = 0
 let currentX = 0, currentY = 0
 

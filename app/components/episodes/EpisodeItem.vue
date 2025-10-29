@@ -1,8 +1,8 @@
 <template>
     <div :class="$style.characterCard">
-        <div :class="$style.imageWrapper">
+        <div :class="$style.imageWrapper" />
 
-        </div>
+
 
 
         <div :class="$style.info">

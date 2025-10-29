@@ -9,6 +9,7 @@
 
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
+
 import { computed } from 'vue'
 
 import { useFavoritesStore } from '~/stores/use-favorites-store'
@@ -28,6 +29,7 @@ const route = useRoute()
 const isHome = computed(() => route.path === '/')
 
 </script>
+
 
 <style scoped>
 .favoriteButton {

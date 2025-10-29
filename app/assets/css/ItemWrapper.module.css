@@ -1,0 +1,29 @@
+.wrapper {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+
+.headerRow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.2rem;
+}
+
+.title {
+    margin-right: 10px;
+}
+
+.content {
+    width: 100%;
+}
+
+@media (max-width: 640px) {
+    .content {
+        display: none;
+
+    }
+}
