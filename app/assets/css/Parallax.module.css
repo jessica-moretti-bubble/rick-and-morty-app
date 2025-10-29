@@ -36,13 +36,7 @@
     opacity: 0;
   }
   
-  .section2 div {
-    background-color: rgba(255, 255, 255, 0.7);
-    color: black;
-    text-align: center;
-    padding: 50px;
-    max-width: 300px;
-  }
+ 
   
   .section2 h2 {
     font-size: 2em;
