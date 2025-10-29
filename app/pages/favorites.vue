@@ -1,19 +1,19 @@
 <template>
-    <div v-if="characterList && characterList.length > 0" class="wrapper">
+    <Box v-if="characterList && characterList.length > 0">
         <NavigationMenu :show-favorites-button="false" />
 
         <FullGrid>
             <CharacterItem v-for="character in characterList" :key="character.id" :character="character"
                 :show-button="true" :handle-click="() => toggle(character.id)" />
         </FullGrid>
-    </div>
+    </Box>
 
 
-    <div v-else class="empty-state">
+    <Box v-else class="empty-state">
         <NavigationMenu :show-favorites-button="false" />
 
         <h2>Non hai nessun preferito</h2>
-    </div>
+    </Box>
 </template>
 
 <script setup lang="ts">
@@ -22,6 +22,7 @@ import { useFavoritesStore } from '~/stores/use-favorites-store.js'
 import FullGrid from '~/components/common/FullGrid.vue'
 import CharacterItem from '~/components/characters/CharacterItem.vue'
 import NavigationMenu from '~/components/common/NavigationMenu.vue'
+import Box from '~/components/common/Box.vue'
 
 const { getMultipleCharacters } = useApi()
 const favorites = useFavoritesStore()
