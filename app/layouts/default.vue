@@ -1,9 +1,9 @@
 <template>
     <div :class="$style.root">
         <img ref="background" :class="$style.background" src="../assets/background/parallax-bg.png" />
-        <div ref="first" :class="[$style.section, $style.section1]" v-if="isHome">
+        <div v-if="isHome" ref="first" :class="[$style.section, $style.section1]">
             <div>
-                <h1>Parallax Made Easy.</h1>
+                <h1>Rick and Morty's Universe</h1>
             </div>
         </div>
         <div ref="second" :class="[$style.section, $style.section2]">

@@ -8,6 +8,8 @@
 
         </div>
 
+
+
         <div class="content">
             <slot />
         </div>
@@ -25,12 +27,16 @@ defineProps<{
 .wrapper {
     width: 100%;
     min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
 }
 
 .headerRow {
     display: flex;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 0.2rem;
 }
 
 .title {

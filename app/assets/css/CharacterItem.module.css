@@ -12,6 +12,8 @@
     padding: 1rem;
     transition: all 0.3s ease;
     cursor: pointer;
+    justify-self: center;
+    align-self: center;
   }
   
   .characterCard:hover {

@@ -1,4 +1,6 @@
 import type { Character } from "~/model/character.model";
+import type { Location } from "~/model/location.model.js";
+import type { Episode } from "~/model/episode.model.js";
 
 export interface ApiResponse<T> {
   info: {
@@ -29,7 +31,7 @@ export const useApi = () => {
   };
 
   const getEpisodes = async (page = 1) => {
-    return await useFetch<ApiResponse<any>>(
+    return await useFetch<ApiResponse<Episode>>(
       `${config.public.apiBaseUrl}/episode`,
       { params: { page } }
     );
